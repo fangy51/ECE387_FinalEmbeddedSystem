@@ -6,7 +6,7 @@
 
 MAX30105 HrSense;
 
-const byte Count = 4; 
+const byte Count = 5; 
 byte rates[Count]; 
 byte rateSpot = 0;
 long lb = 0; 
@@ -93,9 +93,9 @@ if(str > 6500){
   Serial.print("HeartRate : ");
   Serial.print(average);
   Serial.println("BPM");
-    tone(3,1000);       //buzzer just for show that a quantity of heartrate is measured                                
+    tone(5,800);       //buzzer just for show that a quantity of heartrate is measured                                
     delay(150);
-   noTone(3);                                   
+   noTone(5);                                   
 
     long delta = millis() - lb;                
     lb = millis();
@@ -153,7 +153,7 @@ if(str > 6500){
      display.setCursor(30,15);
      display.println("YOUR FINGER");  
      display.display();
-     noTone(3);
+     noTone(5);
      }
 
 }
